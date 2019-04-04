@@ -4,10 +4,9 @@ class Cipher
     cipher = key.chars.uniq + (('a'..'z').to_a - key.chars)
 
     ciphertext_chars = plaintext.chars.map do |char|
-
       (65 + cipher.find_index(char)).chr
     end
-     ciphertext_chars.join
+    ciphertext_chars.join
   end
 
   def decode(ciphertext, key)
